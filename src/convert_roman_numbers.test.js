@@ -15,3 +15,7 @@ test("Coverts number 2 roman numeral II", () => {
   test("Coverts number 4 roman numeral IV", () => {
     expect(decToRoman(4)).toBe("IV");
   });
+
+  test("Coverts number 5 roman numeral V", () => {
+    expect(decToRoman(5)).toBe("V");
+  });

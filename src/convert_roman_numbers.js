@@ -3,7 +3,9 @@ module.exports = decToRoman;
 function decToRoman(number) {
   let romanNumeral = "";
 
-  if (number === 4) {
+  if (number === 5) {
+    romanNumeral = "V";
+  } else if (number === 4) {
     romanNumeral = "IV";
   } else {
     for (let i = 0; i < number; i++) {
