@@ -1,14 +1,13 @@
 module.exports = decToRoman;
 
 function decToRoman(number) {
+  let romanNumeral = "";
 
-    if (number==2){
-        return "II"
-    }
-  return "I";
+  for (let i = 0; i < number; i++) {
+    romanNumeral += "I";
+  }
+  return romanNumeral;
 }
-  
-
 
 // for 1 return I
 // upto 3 return III
