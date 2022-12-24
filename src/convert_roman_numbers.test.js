@@ -19,3 +19,16 @@ test("Coverts number 2 roman numeral II", () => {
   test("Coverts number 5 roman numeral V", () => {
     expect(decToRoman(5)).toBe("V");
   });
+
+
+  test("Coverts number 6 roman numeral VI", () => {
+    expect(decToRoman(6)).toBe("VI");
+  });
+
+  test("Coverts number 7 roman numeral VI", () => {
+    expect(decToRoman(7)).toBe("VII");
+  });
+
+  test("Coverts number 8 roman numeral VIII", () => {
+    expect(decToRoman(8)).toBe("VIII");
+  });
