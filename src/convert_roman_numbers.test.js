@@ -32,3 +32,7 @@ test("Coverts number 2 roman numeral II", () => {
   test("Coverts number 8 roman numeral VIII", () => {
     expect(decToRoman(8)).toBe("VIII");
   });
+
+  test("Coverts number 9 roman numeral IX", () => {
+    expect(decToRoman(9)).toBe("IX");
+  });
