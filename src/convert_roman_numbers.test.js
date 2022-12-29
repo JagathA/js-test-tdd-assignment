@@ -84,3 +84,7 @@ test("Coverts number 2 roman numeral II", () => {
   test("Coverts number 49 roman numeral XLIX", () => {
     expect(decToRoman(49)).toBe("XLIX");
   });
+
+  test("Coverts number 49 roman numeral XLIX", () => {
+    expect(decToRoman(50)).toBe("L");
+  });
