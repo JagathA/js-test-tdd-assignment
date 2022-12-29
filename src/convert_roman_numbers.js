@@ -3,14 +3,29 @@ module.exports = decToRoman;
 function decToRoman(number) {
   let romanNumeral = "";
 
+  while (number >= 1000) {
+    romanNumeral += "M";
+    number -= 1000;
+  }
+
+  if (number >= 900) {
+    romanNumeral += "CM";
+    number -= 900;
+  }
+
+  if (number >= 500) {
+    romanNumeral += "D";
+    number -= 500;
+  }
+
+  if (number >= 400) {
+    romanNumeral += "CD";
+    number -= 400;
+  }
+
   while (number >= 100) {
     romanNumeral += "C";
     number -= 100;
-  }
-
-  if (number >= 99) {
-    romanNumeral += "XCIX";
-    number -= 99;
   }
 
   if (number >= 90) {
