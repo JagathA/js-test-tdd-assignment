@@ -3,6 +3,11 @@ module.exports = decToRoman;
 function decToRoman(number) {
   let romanNumeral = "";
 
+  if (number >= 50) {
+    romanNumeral += "L";
+    number -= 50;
+  }
+  
   if (number >= 40) {
     romanNumeral += "XL";
     number -= 40;
