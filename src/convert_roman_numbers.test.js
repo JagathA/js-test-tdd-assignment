@@ -90,5 +90,42 @@ test("Coverts number 2 roman numeral II", () => {
   });
 
   test("Coverts number 99 roman numeral XLIX", () => {
-    expect(decToRoman(50)).toBe("L");
+    expect(decToRoman(90)).toBe("XC");
   });
+
+  test("Coverts number 100 roman numeral C", () => {
+    expect(decToRoman(100)).toBe("C");
+  });
+
+  test("Coverts number 214 roman numeral C", () => {
+    expect(decToRoman(214)).toBe("CCXIV");
+  });
+
+  test("Coverts number 400 roman numeral C", () => {
+    expect(decToRoman(400)).toBe("CD");
+  });
+
+  test("Coverts number 494 roman numeral CDXCIV", () => {
+    expect(decToRoman(494)).toBe("CDXCIV");
+  });
+
+  test("Coverts number 500 roman numeral D", () => {
+    expect(decToRoman(500)).toBe("D");
+  });
+
+  test("Coverts number 959 roman numeral CM", () => {
+    expect(decToRoman(959)).toBe("CMLIX");
+  });
+
+  test("Coverts number 1000 roman numeral CM", () => {
+    expect(decToRoman(1000)).toBe("M");
+  });
+
+  test("Coverts number 2496 roman numeral CM", () => {
+    expect(decToRoman(2496)).toBe("MMCDXCVI");
+  });
+
+  test("Coverts number 3000 roman numeral CM", () => {
+    expect(decToRoman(3000)).toBe("MMM");
+  });
+  
