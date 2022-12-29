@@ -42,14 +42,37 @@ test("Coverts number 2 roman numeral II", () => {
     expect(decToRoman(10)).toBe("X");
   });
 
-  test("Coverts number 11 roman numeral X", () => {
+  test("Coverts number 11 roman numeral XI", () => {
     expect(decToRoman(11)).toBe("XI");
   });
 
-  test("Coverts number 14 roman numeral X", () => {
+  test("Coverts number 14 roman numeral XIV", () => {
     expect(decToRoman(14)).toBe("XIV");
   });
 
-  test("Coverts number 14 roman numeral X", () => {
+  test("Coverts number 19 roman numeral XIX", () => {
     expect(decToRoman(19)).toBe("XIX");
+  });
+
+  test("Coverts number 20 roman numeral XX", () => {
+    expect(decToRoman(20)).toBe("XX");
+  });
+
+  test("Coverts number 21 roman numeral XXI", () => {
+    expect(decToRoman(21)).toBe("XXI");
+  });
+
+  test("Coverts number 25 roman numeral XXV", () => {
+    expect(decToRoman(25)).toBe("XXV");
+  });
+
+  test("Coverts number 29 roman numeral XXIX", () => {
+    expect(decToRoman(29)).toBe("XXIX");
+  });
+
+  test("Coverts number 30 roman numeral XXX", () => {
+    expect(decToRoman(30)).toBe("XXX");
+  });
+  test("Coverts number 39 roman numeral XXIX", () => {
+    expect(decToRoman(39)).toBe("XXXIX");
   });
