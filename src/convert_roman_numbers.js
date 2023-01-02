@@ -40,23 +40,17 @@ function romanToDec(romanNumeral) {
   let decNumber = 0;
 
   while (romanNumeral.length !== 0) {
-
-    if (romanNumeral.indexOf("IV") === 0) {
-      decNumber += 4;
-      romanNumeral = romanNumeral.replace("IV", "");
+    for (const i in roman) {
+      if (romanNumeral.indexOf(roman[i]) === 0) {
+        decNumber += decimal[i];
+        romanNumeral = romanNumeral.replace(roman[i], "");
+      }
     }
-
-    if (romanNumeral.indexOf("I") === 0) {
-      decNumber += 1;
-      romanNumeral = romanNumeral.replace("I", "");
-    }
-  
   }
   return decNumber;
 }
 
 module.exports = { decToRoman, romanToDec };
-
 
 // for 1 return I
 // upto 3 return III
