@@ -1,10 +1,12 @@
-const decToRoman = require("./convert_roman_numbers");
+const {decToRoman, romanToDec} = require("./convert_roman_numbers.js");
+//const romanToDec = require("./convert_roman_numbers.js");
 
-test("Coverts number 1 roman numeral I", () => {
-  expect(decToRoman(1)).toBe("I");
-});
+describe("Decimal to Roman", () => {
+  test("Coverts number 1 roman numeral I", () => {
+    expect(decToRoman(1)).toBe("I");
+  });
 
-test("Coverts number 2 roman numeral II", () => {
+  test("Coverts number 2 roman numeral II", () => {
     expect(decToRoman(2)).toBe("II");
   });
 
@@ -19,7 +21,6 @@ test("Coverts number 2 roman numeral II", () => {
   test("Coverts number 5 roman numeral V", () => {
     expect(decToRoman(5)).toBe("V");
   });
-
 
   test("Coverts number 6 roman numeral VI", () => {
     expect(decToRoman(6)).toBe("VI");
@@ -36,7 +37,6 @@ test("Coverts number 2 roman numeral II", () => {
   test("Coverts number 9 roman numeral IX", () => {
     expect(decToRoman(9)).toBe("IX");
   });
-
 
   test("Coverts number 10 roman numeral X", () => {
     expect(decToRoman(10)).toBe("X");
@@ -128,5 +128,15 @@ test("Coverts number 2 roman numeral II", () => {
   test("Coverts number 3000 roman numeral CM", () => {
     expect(decToRoman(3000)).toBe("MMM");
   });
+});
 
-  
+describe("Roman to Decimal", () => {
+   test("Coverts roman numeral I number 1", () => {
+    expect(romanToDec("I")).toBe(1);
+  });
+
+  test("Coverts roman numeral III number 3", () => {
+    expect(romanToDec("III")).toBe(3);
+  });
+});
+ 
