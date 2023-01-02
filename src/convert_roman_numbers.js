@@ -18,9 +18,8 @@ const roman = [
 ];
 
 function decToRoman(number) {
-  console.log("****** =>", number);
-  // if (number === undefined) throw new Error("number is required");
-  // if (number === 0) throw new Error("Non zero value is required");
+  if (number === undefined) throw new Error("number is required");
+  if (number === 0) throw new Error("Non zero value is required");
 
   let romanNumeral = "";
 
@@ -41,10 +40,17 @@ function romanToDec(romanNumeral) {
   let decNumber = 0;
 
   while (romanNumeral.length !== 0) {
+
+    if (romanNumeral.indexOf("IV") === 0) {
+      decNumber += 4;
+      romanNumeral = romanNumeral.replace("IV", "");
+    }
+
     if (romanNumeral.indexOf("I") === 0) {
       decNumber += 1;
       romanNumeral = romanNumeral.replace("I", "");
     }
+  
   }
   return decNumber;
 }
