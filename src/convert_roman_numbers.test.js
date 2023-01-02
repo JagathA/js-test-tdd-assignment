@@ -138,5 +138,9 @@ describe("Roman to Decimal", () => {
   test("Coverts roman numeral III number 3", () => {
     expect(romanToDec("III")).toBe(3);
   });
+
+  test("Coverts roman numeral IV number 4", () => {
+    expect(romanToDec("IV")).toBe(4);
+  });
 });
  
