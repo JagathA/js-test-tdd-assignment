@@ -1,24 +1,56 @@
-module.exports = decToRoman;
+//module.exports = romanToDec;
 
 const decimal = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
-const  roman = ["M", "CM","D","CD","C", "XC", "L", "XL", "X","IX","V","IV","I"];
+const roman = [
+  "M",
+  "CM",
+  "D",
+  "CD",
+  "C",
+  "XC",
+  "L",
+  "XL",
+  "X",
+  "IX",
+  "V",
+  "IV",
+  "I",
+];
 
 function decToRoman(number) {
-
-  if (number === undefined) throw new Error("number is required");
-  if (number === 0) throw new Error("Non zero value is required");
+  console.log("****** =>", number);
+  // if (number === undefined) throw new Error("number is required");
+  // if (number === 0) throw new Error("Non zero value is required");
 
   let romanNumeral = "";
 
   for (const i in decimal) {
     while (number >= decimal[i]) {
       romanNumeral += roman[i];
-      number -=  decimal[i];
+      number -= decimal[i];
     }
- }
+  }
 
   return romanNumeral;
 }
+
+function romanToDec(romanNumeral) {
+  if (romanNumeral === undefined) throw new Error("number is required");
+  if (romanNumeral === "") throw new Error("Non null is required");
+
+  let decNumber = 0;
+
+  while (romanNumeral.length !== 0) {
+    if (romanNumeral.indexOf("I") === 0) {
+      decNumber += 1;
+      romanNumeral = romanNumeral.replace("I", "");
+    }
+  }
+  return decNumber;
+}
+
+module.exports = { decToRoman, romanToDec };
+
 
 // for 1 return I
 // upto 3 return III
